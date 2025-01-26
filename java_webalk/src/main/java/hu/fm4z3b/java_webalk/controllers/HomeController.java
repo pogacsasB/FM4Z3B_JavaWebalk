@@ -1,4 +1,4 @@
-package hu.fm4z3b.java_webalk.controller;
+package hu.fm4z3b.java_webalk.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
