@@ -21,6 +21,6 @@ public class PeopleController {
     public String listPeople(Model model) {
         List<People> people = repository.findAll();
         model.addAttribute("people", people);
-        return "people/index";
+        return "people_list";
     }
 }

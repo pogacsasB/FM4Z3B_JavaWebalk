@@ -23,7 +23,7 @@
           <a class="nav-link text-dark" href="/contact">Contact</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark" href="/people/index">People</a>
+          <a class="nav-link text-dark" href="/people/people_list">People</a>
         </li>
       </ul>
 
@@ -51,15 +51,15 @@
       </tr>
     </thead>
     <tbody>
-      <tr th:each="people : ${person}">
-        <td th:text="${people.id}"></td>
-        <td th:text="${people.lastname}"></td>
-        <td th:text="${people.firstname}"></td>
+      <tr th:each="person : ${people}">
+        <td th:text="${person.id}"></td>
+        <td th:text="${person.lastname}"></td>
+        <td th:text="${person.firstname}"></td>
         <td style="white-space: nowrap">
           <a class="btn btn-primary btn-sm"
-             th:href="@{/person/edit(id=${people.id})}">Edit</a>
+             th:href="@{/people/edit(id=${person.id})}">Edit</a>
           <a class="btn btn-danger btn-sm"
-             th:href="@{/person/delete(id=${people.id})}"
+             th:href="@{/people/delete(id=${person.id})}"
               onclick="return confirm('Are you sure?')">Delete</a>
         </td>
       </tr>
